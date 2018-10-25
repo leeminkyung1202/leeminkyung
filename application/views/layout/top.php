@@ -30,6 +30,13 @@
 					<div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
 						<div class="menu_section">
 							<ul class="nav side-menu">
+                                <li>
+                                    <a><i class="fa fa-home"></i> 게시판 <span class="fa fa-chevron-down"></span></a>
+
+                                    <ul class="nav child_menu">
+                                        <li><a href="/board/board">대댓글 가능한 게시판</a></li>
+                                    </ul>
+                                </li>
 								<li>
 									<a><i class="fa fa-home"></i> 달력 <span class="fa fa-chevron-down"></span></a>
 									
@@ -55,21 +62,6 @@
 										<li><a href="/map/mapDaum">다음 지도</a></li>
 									</ul>
 								</li>
-								<!--li>
-									<a><i class="fa fa-home"></i> 실시간 100 <span class="fa fa-chevron-down"></span></a>
-									
-									<ul class="nav child_menu">
-										<li><a href="/realTime/realTimeNaver">네이버 실시간 100</a></li>
-										<li><a href="/realTime/realTimeDaum">다음 실시간 100</a></li>
-									</ul>
-								</li-->
-								<li>
-									<a><i class="fa fa-home"></i> 게시판 <span class="fa fa-chevron-down"></span></a>
-									
-									<ul class="nav child_menu">
-										<li><a href="/board/board">대댓글 가능한 게시판</a></li>
-									</ul>
-								</li>
 							</ul>
 						</div>
 					</div><!-- //sidebar-menu -->
@@ -88,15 +80,11 @@
 		
 						<ul class="nav navbar-nav navbar-right">
 			                <li class="">
-								<a href="/auth/logout"><i class="fa fa-sign-out pull-right"></i> Log Out</a>
+								<a href="/auth/logout"><i class="fa fa-sign-out pull-right" style="margin-top: 9px;"></i> Log Out</a>
 							</li>
 							
 							<!-- 알림 :: STR -->
 							<li role="presentation" class="dropdown">
-								<a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
-									<i class="fa fa-envelope-o"></i>
-									<span class="badge bg-green">6</span>
-								</a>
 								<ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
 									<li>
 										<a>

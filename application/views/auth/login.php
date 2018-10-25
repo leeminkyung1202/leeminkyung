@@ -17,7 +17,7 @@
 
 		// 네이버아이디로 로그인
 		$client_id = "kc3yOAuhOcaTqg4NKWU3"; // 위에서 발급받은 Client ID 입력
-		$redirectURI = urlencode("http://198.13.57.19/auth/loginNaver"); //자신의 Callback URL 입력
+		$redirectURI = urlencode("https://lmk.lunaday.net/auth/loginNaver"); //자신의 Callback URL 입력
 		$state = "RAMDOM_STATE";
 		$apiURL = "https://nid.naver.com/oauth2.0/authorize?response_type=code&client_id=".$client_id."&redirect_uri=".$redirectURI."&state=".$state;
 	?>
@@ -72,21 +72,24 @@
     <!-- 페이스북 아이디로 로그인 :: END -->
 
 	<section class="loginCover">
+        <h1><i class="fa fa-paw"></i> 로그인</h1>
 		<form action="/auth/login" method="POST" name="loginForm">
 			<ul>
-				<li><i class="fa fa-smile-o"></i><input type="text" name="userId" id="userId" value="" placeholder="ID" /></li>
-				<li><i class="fa fa-unlock-alt"></i><input type="password" name="passWord" id="passWord" value="" placeholder="PW" /></li>
+				<li><input type="text" name="userId" id="userId" value="" placeholder="ID" /></li>
+				<li><input type="password" name="passWord" id="passWord" value="" placeholder="PW" /></li>
 			</ul>
-			<button type="submit" id="btn">로그인</button>
+            <button type="submit" class="btn btn-default" id="btn">Log in</button>
 		</form>
-		<a href="/auth/register">회원가입</a>
+		<a href="/auth/register" class="register">회원가입</a>
 
 		<dl>
 			<dt>간편로그인</dt>
-			<dd><a href="<?=$apiURL?>"><img src="/gentelella-master/production/images/loginBtnNaver.png" alt="네이버 아이디 로그인" width='60px' /></a></dd>
-            <dd><a id="custom-login-btn" href="javascript:loginWithKakao()"><img src="/gentelella-master/production/images/loginBtnKakao.png" alt="카카오 아이디 로그인" width='60px' /></a></dd>
-            <dd><a href="javascript:;" onclick="facebooklogin()"><img src="/gentelella-master/production/images/loginBtnFacebook.png" alt="페이스북 아이디 로그인" width='60px' /></a></dd>
+			<dd><a href="<?=$apiURL?>"><img src="/gentelella-master/production/images/loginBtnNaver.png" alt="네이버 아이디 로그인" /></a></dd>
+            <dd><a id="custom-login-btn" href="javascript:loginWithKakao()"><img src="/gentelella-master/production/images/loginBtnKakao.png" alt="카카오 아이디 로그인" /></a></dd>
+            <dd><a href="javascript:;" onclick="facebooklogin()"><img src="/gentelella-master/production/images/loginBtnFacebook.png" alt="페이스북 아이디 로그인" /></a></dd>
         </dl>
+        
+        <p class="test">테스트 아이디 : test1<br/>테스트 비밀번호 : test1</p>
 	</section><!-- //loginCover -->
 	
 	<script>

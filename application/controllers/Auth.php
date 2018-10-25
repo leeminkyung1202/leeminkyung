@@ -138,7 +138,7 @@ class Auth extends MY_Controller {
 		$client_secret = "41l2J3pojF";
 		$code = $this->input->get("code");
 		//$state = $this->input->get("state");
-		$redirectURI = urlencode("http://198.13.57.19");
+		$redirectURI = urlencode("https://lmk.lunaday.net");
 		$url = "https://nid.naver.com/oauth2.0/token?grant_type=authorization_code&client_id=".$client_id."&client_secret=".$client_secret."&redirect_uri=".$redirectURI."&code=".$code."&state=".$state;
 		
 		// 토큰 값 가져오기, 가져와서 다시 네이버로 던져야함! 그럼 네이버가 회원 정보를 줌

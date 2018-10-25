@@ -10,24 +10,20 @@
 ?>
 
 <section class="loginCover">
+    <h1><i class="fa fa-paw"></i> 회원가입</h1>
 	<form action="/auth/register" method="POST" name="loginForm">
 		<ul>
+			<li><input type="text" name="userName" id="userName" value="<?=set_value('userName')?>" placeholder="NAME" />
 			<li>
-				<i class="fa fa-smile-o"></i><input type="text" name="userName" id="userName" value="<?=set_value('userName')?>" placeholder="NAME" />
-			</li>
-			<li>
-				<i class="fa fa-smile-o"></i><input type="text" name="userId" id="userId" value="<?=set_value('userId')?>" minlength="5" maxlength="12" placeholder="ID" />
+				<input type="text" name="userId" id="userId" value="<?=set_value('userId')?>" minlength="5" maxlength="12" placeholder="ID" />
 				<span class="idOverlap"></span>
 			</li>
-			<li>
-				<i class="fa fa-unlock-alt"></i><input type="password" name="passWord" id="passWord" value="<?=set_value('passWord')?>" placeholder="PW" />
-			</li>
-			<li>
-				<i class="fa fa-unlock-alt"></i><input type="password" name="passConf" id="passConf" value="<?=set_value('passConf')?>" placeholder="PW2" />
-			</li>
+			<li><input type="password" name="passWord" id="passWord" value="<?=set_value('passWord')?>" placeholder="PW" /></li>
+			<li><input type="password" name="passConf" id="passConf" value="<?=set_value('passConf')?>" placeholder="PW2" /></li>
 		</ul>
-		<button type="submit" id="btn">회원가입</button>
+		<button type="submit" class="btn btn-default" id="btn">회원가입</button>
 	</form>
+    <a href="/auth/login" class="register">로그인</a>
 </section><!-- //loginCover -->
 
 <script>
